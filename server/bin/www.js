@@ -4,10 +4,15 @@
  * Module dependencies.
  */
 
-var app = require('../../app');
-var debug = require('debug')('p01-projnotes:server');
-var http = require('http');
+import app from '../app';
+//Modernizando el script
+//var debug = require('debug')('p01-projnotes:server');
+import Debug from 'debug';
+//var http = require('http');
+import http from "http";
 
+//Creando una instancia de debugger
+const debug = Debug ("p01-projnotes:server")
 /**
  * Get port from environment and store in Express.
  */
@@ -20,7 +25,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app); // (req, res, next, err) 
+const server = http.createServer(app); // (req, res, next, err) 
 //=> {}      "app es u gran callback"
 
 /**
@@ -71,11 +76,11 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
+      console.error(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
+      console.error(`${bind} is already in use`);
       process.exit(1);
       break;
     default:
@@ -88,10 +93,10 @@ function onError(error) {
  */
 
 function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-  console.log(`✍ Servidor escuchando .. en ${app.get('port')}`);
+  const addr = server.address();
+  const bind = typeof addr === 'string'
+    ? `pipe ${addr} `
+    : `port ${addr.port}` ;
+  debug(`Listening on ${bind}`);
+  console.log(`✍ Servidor escuchando 🤖.. en ${app.get("port")}`);
 }
