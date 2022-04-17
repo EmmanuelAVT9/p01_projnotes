@@ -21,6 +21,6 @@ module.exports = {
     // de WP (Webpack)
     port: 8080,
     // 3.3 Definiendo host
-    host: "localhost"
+    host: "localhost",
   },
 }; 
