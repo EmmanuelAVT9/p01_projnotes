@@ -1,3 +1,8 @@
+// Incorporando estilos
+// a mi bundle.js
+import './styles/style.css'
+import './styles/mystyle.css'
+
 console.log("🎁Webpack Working");
 
 // Default parameters ES6/2015
