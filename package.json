@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "SET NODE_ENV=production node ./dist/bin/www",
-    "dev": "SET NODE_ENV=development babel-watch ./server/bin/www",
+    "dev": "babel-watch ./server/bin/www",
     "client:server": "SET NODE_ENV=development && webpack serve --config ./webpack.dev.config.js --mode development",
     "clean:server": "rimraf dist",
     "clean:client": "rimraf public/javascripts/bundle.js && rimraf public/stylesheets/styles.css",
