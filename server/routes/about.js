@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
       name: 'Emmanuel Vázquez',
       email: 'prueba@gmail.com',
       url: 'www.itgam.com/emmanuelVazquez',
-    },
+    }
   );
 });
 

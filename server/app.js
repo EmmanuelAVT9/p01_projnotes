@@ -60,9 +60,11 @@ if (nodeEnv === 'development') {
   const bundler = webpack(webpackConfig);
 
   // Habilitando el Middleware de webpack en express
-  app.use(WebpackDevMiddleware(bundler, {
-    publicPath: webpackConfig.output.publicPath,
-  }));
+  app.use(
+    WebpackDevMiddleware(bundler, {
+      publicPath: webpackConfig.output.publicPath,
+    })
+  );
 
   // Habilitando el Middleware del Webpack HMR
   app.use(WebpackHotMiddleware(bundler));

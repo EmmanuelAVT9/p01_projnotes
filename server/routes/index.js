@@ -8,7 +8,8 @@ router.get('/', (req, res) => {
   // la vista al cliente
   // calculando
   const emojieDataset = ['💻', '👨‍💻', '🎈', '🎄'];
-  const emojie = emojieDataset[Math.floor(Math.random() * emojieDataset.length)];
+  const emojie =
+    emojieDataset[Math.floor(Math.random() * emojieDataset.length)];
   res.render(
     'index',
     // Este es el View Model
@@ -16,7 +17,7 @@ router.get('/', (req, res) => {
       title: 'Express',
       author: 'Emmanuel Vázquez',
       emojie,
-    },
+    }
   );
 });
 

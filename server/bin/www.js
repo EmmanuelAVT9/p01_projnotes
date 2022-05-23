@@ -82,10 +82,9 @@ const server = http.createServer(app); // (req, res, next, err)
 
 function onListening() {
   const addr = server.address();
-  const bindAdress = typeof addr === 'string'
-    ? `pipe ${addr} `
-    : `port ${addr.port}`;
-  debug(`Listening on ${bindAdress}`);
+  const bindAddress =
+    typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
+  debug(`Listening on ${bindAddress}`);
   console.log(`✍ Servidor escuchando 🤖.. en ${app.get('port')}`);
 }
 
