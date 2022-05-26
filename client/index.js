@@ -2,7 +2,7 @@
 
 // Incorporando estilos
 // a mi bundle.js
-import './styles/style.css';
+
 import './styles/mystyle.css';
 
 console.log('🎁 Front-End Working!!!');
