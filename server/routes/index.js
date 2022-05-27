@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     'index',
     // Este es el View Model
     {
-      title: 'Express',
+      title: 'ProjNotes',
       author: 'Emmanuel Vázquez',
       emojie,
     }
