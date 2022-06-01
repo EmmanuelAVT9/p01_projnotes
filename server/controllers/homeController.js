@@ -31,6 +31,9 @@ const about = (req, res) => {
     name: 'Emmanuel Vázquez',
     email: 'prueba@gmail.com',
     url: 'www.itgam.com/emmanuelVazquez',
+    description:
+      'Aplicación que te permite registrar ideas de proyectos. PwpcII-2022A',
+    version: '0.0.alpha',
   });
 };
 
